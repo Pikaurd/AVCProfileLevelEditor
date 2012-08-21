@@ -30,5 +30,6 @@ H.264/AVC Profile and Level Editor for PlayStation Vita
   2. 目前只支持ISO Media, MPEG v4 system, version 1
   3. 即使是ISO Media, MPEG v4 system, version 1但是没有在前8k找到avcC标识也
   不被支持
+  4. High Profile 4.1转到3.1只有前面部分能播放
 
 

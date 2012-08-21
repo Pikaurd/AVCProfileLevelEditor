@@ -15,7 +15,7 @@ def avcLevelEditor(filePath):
       index = t.index(MagicCode)
       assert(index)
       currentProfile = t[index+5 : index + 8]
-      if currentProfile == MainProfile and currentProfile == HighProfile:
+      if currentProfile == MainProfile or currentProfile == HighProfile:
         print('skip ' + filePath)
         return # It is already supported AVC Level
       if currentProfile[0] == HighProfile[0]:
@@ -26,9 +26,9 @@ def avcLevelEditor(filePath):
         print("change to Main Profile")
       
       print(list(map(hex, currentProfile)))
-      #t = t.replace(currentProfile, toProfile)
-      #f.seek(0)
-      #f.write(t)
+      t = t.replace(currentProfile, toProfile)
+      f.seek(0)
+      f.write(t)
 
     # write log file
     with open(filePath+'.log', 'w') as f:
